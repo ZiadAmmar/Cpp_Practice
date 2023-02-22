@@ -5,6 +5,8 @@
 
 using namespace std;
 
+void printPizzaDetails(const Pizza& pizza); //passing by constant reference
+
 int main(){
     Pizza Margrita("Margrita", 50, 15);
     Pizza Pepperoni("Pepperoni", 75, 20);
@@ -18,22 +20,23 @@ int main(){
     Special.addToppings("Parmesian");
 
     cout<<"First order:"<<endl;
-    Margrita.printToppings();
-    cout<<"Cost:\t"<<Margrita.getCost()<<endl;
-    cout<<"___________________________________\n\n\n";
+    printPizzaDetails(Margrita);
 
     cout<<"Second order:"<<endl;
-    Pepperoni.printToppings();
-    cout<<"Cost:\t"<<Pepperoni.getCost()<<endl;
-    cout<<"___________________________________\n\n\n";
+    printPizzaDetails(Pepperoni);
 
     cout<<"Third order:"<<endl;
-    Special.printToppings();
-    cout<<"Cost:\t"<<Special.getCost()<<endl;
-    cout<<"___________________________________\n\n\n";
-
-
-
+    printPizzaDetails(Special);
 
     return 0;
+}
+
+void printPizzaDetails(const Pizza& pizza){
+    cout<<"**********************************\n";
+    cout<<"Pizza name: \t"<<pizza.getName()
+    <<"\nDiameter: \t"<<pizza.getDiameter()
+    <<"\nToppings:"<<endl;
+    pizza.printToppings();
+    cout<<"Cost: \t"<<pizza.getCost()<<endl;
+    cout<<"**********************************\n\n\n";
 }

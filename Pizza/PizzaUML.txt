@@ -8,6 +8,8 @@
 |------------------------------------------------------------------|
 | + Pizza(name:string, cost:int, diameter:int)                     |
 | + addToppings(topping:string) : void                             |
+| + getName()       : string                                       |
 | + getCost()       : int                                          |
+| + getDiameter()   : int                                          |
 | + printToppings() : void                                         |
 --------------------------------------------------------------------

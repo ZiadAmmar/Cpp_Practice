@@ -19,10 +19,12 @@ class Pizza{
     //constructor
     Pizza(string name, int cost, int diameter);
     //getter
+    string getName() const;
     int getCost() const;
+    int getDiameter() const;
     //member functions
-    void addToppings(string topping);
-    void printToppings();
+    void addToppings(string topping) ;
+    void printToppings() const;
 
 };
 #endif

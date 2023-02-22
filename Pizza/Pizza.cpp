@@ -12,21 +12,22 @@ Pizza::Pizza(string name, int cost, int diameter){
     this->diameter = diameter;
     this->toppings = {"Cheese"};
 }
-//getter
+//getters
+string Pizza::getName() const{
+    return name;
+}
 int Pizza::getCost() const{
     return cost;
+}
+int Pizza::getDiameter() const{
+    return diameter;
 }
 //member functions
 void Pizza::addToppings(string topping){
     toppings.push_back(topping);
 }
-void Pizza::printToppings(){
-    cout<<"**********************************\n";
-    cout<<"The Pizza: \t"<<name<<endl;
-    cout<<"Toppings: "<<endl;
+void Pizza::printToppings() const{
     for(string topping : toppings){
         cout<<"\t"<<topping<<endl;
     }
-    cout<<"**********************************\n";
-
 }
