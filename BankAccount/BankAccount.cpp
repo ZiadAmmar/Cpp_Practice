@@ -44,9 +44,14 @@ using namespace std;
     }
     void BankAccount::withdraw(int amount){
          if(amount >= 0){
+            if(amount > balance){
+                cout<<"ERR: Current Balance is: "<<balance
+                <<"\nAmount: "<<amount<<" is greater than balance."<<endl;
+            }else{
             balance -= amount;
             cout<<"Substracting Withdraw of: "<<amount<<" to account of: "<<owner<<endl;
             cout<<"New Balance is: "<<balance<<endl;
+            }
         } else {
             cout<<"ERR: Negative numbers for withdraw are not allowed"<<endl;
             cout<<"Balance is still: "<<balance<<endl;

@@ -24,6 +24,8 @@ int main(){
     Alaa.printAccountDetails();
     //trying overload constructor with negative balance
     BankAccount Maro("Maro",-500);
+    //trying to withdraw when amount withdrawn is greater than current balance
+    Maro.withdraw(50);
     Maro.printAccountDetails();
     return 0;
 }
